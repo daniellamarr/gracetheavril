@@ -2,7 +2,7 @@
   <header>
     <ul v-bind:style="{color: mode === 'dark' ? darkMode.color : lightMode.color}">
       <li class="mode" @click="changeMode">
-        {{ mode === 'light' ? 'Light' : 'Dark' }}
+        {{ mode === 'dark' ? 'Light' : 'Dark' }}
       </li>
       <li>
         <img src="../assets/logo-light.png" v-bind:style="{width: '70px'}" alt="" v-if="mode==='dark'">

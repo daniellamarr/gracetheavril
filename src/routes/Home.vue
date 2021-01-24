@@ -49,7 +49,11 @@
         </div>
       </div>
     </section>
-    <section id="contact">
+    <section id="contact"
+      v-bind:style="{
+        backgroundColor: mode === 'dark' ? darkMode.bgColor : lightMode.bgColor,
+        color: mode === 'dark' ? darkMode.color : lightMode.color
+      }">
       <div class="contact-section">
         <div class="getintouch">
           <h1>Get in touch!</h1>
@@ -69,14 +73,14 @@
           <div class="contact-form">
             <div class="input-flex">
               <div class="input">
-                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Name" :style="{color: mode === 'dark' ? darkMode.color : lightMode.color, borderColor: mode === 'dark' ? darkMode.color : lightMode.color}">
               </div>
               <div class="input">
-                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Email" :style="{color: mode === 'dark' ? darkMode.color : lightMode.color, borderColor: mode === 'dark' ? darkMode.color : lightMode.color}">
               </div>
             </div>
             <div>
-              <input type="text" placeholder="Message">
+              <input type="text" placeholder="Message" :style="{color: mode === 'dark' ? darkMode.color : lightMode.color, borderColor: mode === 'dark' ? darkMode.color : lightMode.color}">
             </div>
             <div class="form-button">
               <button>
